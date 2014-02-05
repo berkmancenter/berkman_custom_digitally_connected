@@ -1,0 +1,72 @@
+/*
+Theme Name:     Digitally Connected
+Description:    Custom Twentyeleven child theme for Digitally Connected conference
+Author:         Justin Clark
+Template:       twentyten
+*/
+
+@import url("../twentyten/style.css");
+
+#site-title {
+  float: none;
+  width: auto;
+  text-align: center;
+  margin-bottom: 7px;
+  font-family: "Open Sans";
+}
+
+#site-description {
+  font-size: 2em;
+  width: 700px;
+  float: none;
+  clear: none;
+  font-style: normal;
+  font-family: Arial;
+  line-height: 1.2em;
+  text-align: center;
+  margin: 0 auto 1em;
+  font-family: "Open Sans";
+}
+
+#film_roll {
+  margin-bottom: 0.8em;
+}
+
+#film_roll a {
+  text-decoration: none;
+  color: white;
+}
+
+.film_roll_child {
+  margin: 0.1em 0.2em;
+}
+
+#branding img {
+  box-shadow: 0 4px 6px #666;
+  border: 0;
+}
+
+#access {
+  background-color: #E9E9E9;
+}
+
+#access a {
+  color: #575757;
+  font-family: 'Open Sans';
+}
+
+#access ul li.current_page_item > a {
+  color: #912424;
+}
+
+#access li:hover > a, #access ul ul :hover > a {
+  background-color: #6D6D6D;
+}
+
+#footer a {
+  font-family: "Open Sans";
+}
+
+#site-generator {
+  display: none;
+}
