@@ -92,7 +92,7 @@ html, body {
   line-height: 36px;
 }
 
-.menu > ul > li > a:before {
+ul.menu > li > a:before {
   content: '| ';
   color: #888;
   font-size: 1.5em;
