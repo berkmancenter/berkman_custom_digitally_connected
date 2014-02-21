@@ -7,29 +7,39 @@ Template:       twentyten
 
 @import url("../twentyten/style.css");
 
+html, body {
+  font-family: 'Open Sans';
+}
+
+#wrapper {
+  margin-top: 0;
+  padding: 0;
+}
+
+#header {
+  padding-top: 0;
+}
+
 #site-title {
   float: none;
   width: auto;
-  text-align: center;
-  margin-bottom: 7px;
-  font-family: "Open Sans";
+  font-family: "Nova Square";
+  text-transform: uppercase;
+  text-align: left;
+  background: #333;
+  font-size: 25px;
+  padding: 1em 3em 0.5em;
+  margin: 0;
 }
 
-#site-description {
-  font-size: 2em;
-  width: 700px;
-  float: none;
-  clear: none;
-  font-style: normal;
-  font-family: Arial;
-  line-height: 1.2em;
-  text-align: center;
-  margin: 0 auto 1em;
-  font-family: "Open Sans";
+#site-title a {
+  color: white;
+  letter-spacing: 4px;
 }
 
 #film_roll {
-  margin-bottom: 0.8em;
+  margin: 0;
+  position: relative;
 }
 
 #film_roll a {
@@ -37,36 +47,110 @@ Template:       twentyten
   color: white;
 }
 
+.film_roll_pager {
+  position: absolute;
+  right: 1em;
+  bottom: 0.3em;
+}
+#film_roll .film_roll_pager a {
+  width: 0;
+  height: 0;
+  border: 8px solid #C72032;
+  border-radius: 10px;
+}
+
+#film_roll .film_roll_pager a.active {
+  border-color: #999;
+}
+
 .film_roll_child {
-  margin: 0.1em 0.2em;
+  margin: 0;
+}
+
+#film_roll .film_roll_prev, #film_roll .film_roll_next {
+  line-height: 27px;
 }
 
 #branding img {
-  box-shadow: 0 4px 6px #666;
   border: 0;
+  float: none;
+  display: inline;
+}
+
+#logos {
+  text-align: right;
+  padding: 1em;
 }
 
 #access {
-  background-color: #E9E9E9;
+  background-color: #333;
 }
 
 #access a {
-  color: #575757;
+  color: #DDD;
   font-family: 'Open Sans';
+  line-height: 36px;
+}
+
+.menu > ul > li > a:before {
+  content: '| ';
+  color: #888;
+  font-size: 1.5em;
 }
 
 #access ul li.current_page_item > a {
-  color: #912424;
+  background-color: #555;
 }
 
 #access li:hover > a, #access ul ul :hover > a {
   background-color: #6D6D6D;
 }
 
+#container {
+  margin-right: -360px;
+}
+#content {
+  margin-left: 40px;
+  margin-right: 360px;
+}
+
+#content .entry-title, #content .entry-title a {
+  color: #999;
+  font-family: 'Lora';
+}
+
+#primary, #secondary {
+  width: 300px;
+  padding-right: 20px;
+}
+
+.entry-meta, .entry-utility {
+  display: none !important;
+}
+
 #footer a {
   font-family: "Open Sans";
 }
 
+#colophon {
+  padding-left: 2em;
+}
+
 #site-generator {
   display: none;
+}
+
+.rotatingtweets_format_1 {
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  margin-top: 0.3em;
+}
+
+.norotatingtweets .rotatingtweet {
+  padding: 1em 1em 0.3em 1em;
+}
+
+.rtw_follow {
+  text-align: center;
+  padding-top: 0.5em;
 }

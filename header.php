@@ -36,7 +36,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:700italic,400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lora|Nova+Square|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
@@ -58,13 +58,15 @@
 	<div id="header">
 		<div id="masthead">
 			<div id="branding" role="banner">
+      <div id="logos">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/logos.png" alt="Berkman Center for Internet & Society and unicef" />
+      </div>
 				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 				<<?php echo $heading_tag; ?> id="site-title">
 					<span>
 						<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 					</span>
         </<?php echo $heading_tag; ?>>
-        <div id="site-description"><?php bloginfo( 'description' ); ?></div>
 
       <?php echo film_roll(); ?>
 			</div><!-- #branding -->

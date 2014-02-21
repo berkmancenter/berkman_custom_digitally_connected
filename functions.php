@@ -90,5 +90,6 @@ add_shortcode( 'person', 'create_person' );
 wp_enqueue_script('filmroll', get_bloginfo('stylesheet_directory') . '/jquery.film_roll.min.js',array('jquery'));
 wp_enqueue_script('digitallyconnected', get_bloginfo('stylesheet_directory') . '/digitally_connected.js',array('filmroll'));
 add_action('init', 'add_custom_post_types');
+add_filter('widget_text', 'do_shortcode');
 
 ?>
