@@ -56,6 +56,11 @@ body {
   right: 1em;
   bottom: 0.3em;
 }
+
+.film_roll_wrapper {
+  min-height: 300px !important;
+}
+
 #film_roll .film_roll_pager a {
   width: 0;
   height: 0;

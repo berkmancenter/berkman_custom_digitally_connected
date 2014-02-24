@@ -83,8 +83,8 @@ function googleMaps_shortcode($atts, $content = null) {
 }
 add_shortcode("googlemap", "googleMaps_shortcode");
 
-define ('SLIDER_IMAGE_WIDTH', 600);
-define ('SLIDER_IMAGE_HEIGHT', 198);
+define ('SLIDER_IMAGE_WIDTH', 940);
+define ('SLIDER_IMAGE_HEIGHT', 300);
 add_image_size('slider', SLIDER_IMAGE_WIDTH, SLIDER_IMAGE_HEIGHT);
 add_shortcode( 'person', 'create_person' );
 wp_enqueue_script('filmroll', get_bloginfo('stylesheet_directory') . '/jquery.film_roll.min.js',array('jquery'));
