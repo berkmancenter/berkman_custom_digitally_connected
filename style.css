@@ -163,3 +163,7 @@ ul.menu > li > a:before, .menu > ul > li > a:before {
   text-align: center;
   padding-top: 0.5em;
 }
+
+.person-bio {
+  margin-bottom: 1.5em;
+}

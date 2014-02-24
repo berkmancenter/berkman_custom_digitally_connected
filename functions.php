@@ -61,11 +61,19 @@ function create_person( $attributes ) {
     $image_key_values = get_post_custom_values('picture');
     $image_url = $image_key_values[0];
 
-    $html = '<div class="person"><h4><strong>
-      <a href="'.$image_url.'">
-      <img class="alignleft size-full person_photo" src="'.$image_url.'" alt="" />
-      </a>'.get_the_title().'</strong></h4>';
-    $html .= '<p>'.get_the_content().'</p></div>';
+    $html = '<div class="person"><h4><strong>';
+    if (!empty($image_url)) {
+      $html .= '<a href="'.$image_url.'">
+      <img class="alignleft size-full person_photo" src="'.$image_url.'" alt="" width="250" height="250" />
+      </a>';
+    } 
+    $html .= get_the_title().'</strong></h4>';
+    $content = get_the_content();
+    if (substr(trim($content), 0, 2) != '<p') {
+      $content = '<p>' . $content . '</p>';
+    }
+      
+    $html .= '<div class="person-bio">'.$content.'</div></div>';
 
     wp_reset_query();
   }
@@ -88,8 +96,8 @@ define ('SLIDER_IMAGE_HEIGHT', 300);
 add_image_size('slider', SLIDER_IMAGE_WIDTH, SLIDER_IMAGE_HEIGHT);
 add_shortcode( 'person', 'create_person' );
 wp_enqueue_script('filmroll', get_bloginfo('stylesheet_directory') . '/jquery.film_roll.min.js',array('jquery'));
-wp_enqueue_script('digitallyconnected', get_bloginfo('stylesheet_directory') . '/digitally_connected.js',array('filmroll'));
+wp_enqueue_script('dotdotdot', get_bloginfo('stylesheet_directory') . '/jquery.dotdotdot.min.js',array('jquery'));
+wp_enqueue_script('digitallyconnected', get_bloginfo('stylesheet_directory') . '/digitally_connected.js',array('filmroll', 'dotdotdot'));
 add_action('init', 'add_custom_post_types');
 add_filter('widget_text', 'do_shortcode');
-
 ?>
