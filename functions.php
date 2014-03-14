@@ -97,7 +97,8 @@ add_image_size('slider', SLIDER_IMAGE_WIDTH, SLIDER_IMAGE_HEIGHT);
 add_shortcode( 'person', 'create_person' );
 wp_enqueue_script('filmroll', get_bloginfo('stylesheet_directory') . '/jquery.film_roll.min.js',array('jquery'));
 wp_enqueue_script('dotdotdot', get_bloginfo('stylesheet_directory') . '/jquery.dotdotdot.min.js',array('jquery'));
-wp_enqueue_script('digitallyconnected', get_bloginfo('stylesheet_directory') . '/digitally_connected.js',array('filmroll', 'dotdotdot'));
+wp_enqueue_script('flipclock', get_bloginfo('stylesheet_directory') . '/flipclock.min.js',array('jquery'));
+wp_enqueue_script('digitallyconnected', get_bloginfo('stylesheet_directory') . '/digitally_connected.js',array('filmroll', 'dotdotdot', 'flipclock'));
 add_action('init', 'add_custom_post_types');
 add_filter('widget_text', 'do_shortcode');
 ?>

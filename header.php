@@ -37,7 +37,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link href='http://fonts.googleapis.com/css?family=Lora|Nova+Square|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
@@ -59,15 +59,16 @@
 	<div id="header">
 		<div id="masthead">
 			<div id="branding" role="banner">
-      <div id="logos">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/logos.png" alt="Berkman Center for Internet & Society and unicef" />
-      </div>
-				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
-				<<?php echo $heading_tag; ?> id="site-title">
+        <div id="logos">
+          COHOSTED BY: <a href="http://cyber.law.harvard.edu"><img src="<?php echo get_stylesheet_directory_uri(); ?>/berkman.png" alt="Berkman Center for Internet & Society" /></a>
+          <a href="http://www.unicef.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/unicef.png" alt="unicef" /></a>
+        </div>
+				<div id="site-title">
 					<span>
-						<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+						<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/logo.png" alt="Digitally Connected" /></a>
 					</span>
-        </<?php echo $heading_tag; ?>>
+        </div>
+        <div id="clock"></div>
 
       <?php echo film_roll(); ?>
 			</div><!-- #branding -->

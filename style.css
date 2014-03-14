@@ -6,6 +6,7 @@ Template:       twentyten
 */
 
 @import url("../twentyten/style.css");
+@import url("flipclock.css");
 
 html, body {
   font-family: 'Open Sans';
@@ -14,10 +15,22 @@ html, body {
 body {
   background-color: #F1F1F1;
 }
+#access .menu-header,
+div.menu,
+#colophon,
+#branding,
+#main,
+#access,
+#wrapper {
+  width: 856px;
+}
 
 #wrapper {
   margin-top: 0;
-  padding: 0;
+  padding: 12px 42px;
+}
+#content, #content input, #content textarea {
+  font-size: 14px;
 }
 
 #header {
@@ -25,15 +38,10 @@ body {
 }
 
 #site-title {
-  float: none;
-  width: auto;
-  font-family: "Nova Square";
-  text-transform: uppercase;
-  text-align: left;
-  background: #333;
-  font-size: 25px;
-  padding: 1em 3em 0.5em;
-  margin: 0;
+  display: inline-block;
+  width: 177px;
+  height: 70px;
+  margin: 0 30px 14px 0;
 }
 
 #site-title a {
@@ -86,51 +94,75 @@ body {
   display: inline;
 }
 
+#clock {
+  display: inline-block;
+  width: 115px;
+}
+
 #logos {
-  text-align: right;
-  padding: 1em;
+  font-family: "Open Sans Condensed";
+  padding: 0em;
+  float: right;
+  height: 70px;
+  line-height: 70px;
+  font-size: 1.2em;
+}
+
+#logos a {
+  margin: 0 0.5em;
+  height: 49px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 55px;
 }
 
 #access {
-  background-color: #333;
+  background-color: #ACFAFD;
 }
 
 #access a {
-  color: #DDD;
+  color: #339ACF;
   font-family: 'Open Sans';
   line-height: 36px;
-}
-
-ul.menu > li > a:before, .menu > ul > li > a:before {
-  content: '| ';
-  color: #888;
-  font-size: 1.5em;
+  font-weight: 600;
 }
 
 #access ul li.current_page_item > a {
-  background-color: #555;
+  background-color: #4898E2;
+}
+
+#access ul ul {
+  top: 36px;
+}
+
+#access ul ul a {
+  background-color: #E4FFFF;
 }
 
 #access li:hover > a, #access ul ul :hover > a {
-  background-color: #6D6D6D;
+  background-color: #7ED1FF;
 }
 
 #container {
-  margin-right: -360px;
+  margin-right: -310px;
 }
 #content {
   margin-left: 40px;
-  margin-right: 360px;
+  margin-right: 310px;
 }
 
 #content .entry-title, #content .entry-title a {
-  color: #999;
-  font-family: 'Lora';
+  color: #F26B37;
+  font-family: "Open Sans Condensed";
+	font-size: 26px;
+	font-weight: bold;
 }
 
 #primary, #secondary {
-  width: 300px;
-  padding-right: 20px;
+  width: 256px;
+}
+#main .widget-area ul {
+  padding: 0;
 }
 
 .entry-meta, .entry-utility {
@@ -164,6 +196,18 @@ ul.menu > li > a:before, .menu > ul > li > a:before {
   padding-top: 0.5em;
 }
 
-.person-bio {
-  margin-bottom: 1.5em;
+.person {
+  height: 175px;
+  margin-bottom: 28px;
+}
+
+.person_photo {
+  border: 4px solid #3E81FA;
+  width: 165px;
+  height: 165px;
+}
+
+.time {
+  display:inline-block;
+  width:150px;
 }
