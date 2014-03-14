@@ -176,6 +176,10 @@ div.menu,
   font-family: "Open Sans";
 }
 
+#berkman-footer-links {
+  display: none;
+}
+
 #site-info {
   padding-left: 2em;
 }
