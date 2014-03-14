@@ -204,8 +204,10 @@ div.menu,
 }
 
 .person {
-  height: 175px;
-  margin-bottom: 28px;
+  height: 185px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .person_photo {
