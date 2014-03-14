@@ -37,6 +37,9 @@ div.menu,
   padding-top: 0;
 }
 
+#topbar {
+  height: 84px;
+}
 #site-title {
   display: inline-block;
   width: 177px;
