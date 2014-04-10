@@ -120,18 +120,17 @@ div.menu,
 }
 
 #access {
-  background-color: #ACFAFD;
+  background-color: #66CCFF;
 }
 
 #access a {
-  color: #339ACF;
+  color: #FFFFFF;
   font-family: 'Open Sans';
   line-height: 36px;
   font-weight: 600;
 }
 
 #access ul li.current_page_item > a {
-  background-color: #4898E2;
 }
 
 #access ul ul {
@@ -139,11 +138,11 @@ div.menu,
 }
 
 #access ul ul a {
-  background-color: #E4FFFF;
+  background-color: #66CCFF;
 }
 
 #access li:hover > a, #access ul ul :hover > a {
-  background-color: #7ED1FF;
+  background-color: #3399CC;
 }
 
 #container {
