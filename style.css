@@ -219,3 +219,55 @@ div.menu,
   display:inline-block;
   width:150px;
 }
+
+#content .agenda {
+  font-family: Georgia, serif;
+}
+#content .agenda table, #content .agenda table tr td {
+  border: 0;
+}
+#content .agenda table {
+  margin-top: 1em;
+}
+#content .agenda h1 {
+  text-align: center;
+  font-size: 1.6em;
+  line-height: 1.3em;
+}
+#content .agenda h1:first-child {
+  margin: 0;
+}
+#content .agenda h2 {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.3em;
+}
+#content .agenda h3 {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 0;
+}
+#content .agenda h4 {
+  font-weight: bold;
+  margin: 0;
+  margin-top: 1.2em;
+}
+#content .agenda h4:first-child {
+  margin: 0;
+}
+#content .agenda h4.agenda-segment {
+  margin-bottom: 1.2em;
+}
+#content .agenda p {
+  margin: 0;
+}
+#content .agenda .agenda-location {
+  margin-bottom: 1em;
+}
+#content .agenda .agenda-time {
+  width: 25%;
+}
+#content .agenda td > ul > li {
+  margin: 1em 0;
+}
