@@ -98,7 +98,7 @@ div.menu,
 }
 
 #clock {
-  display: inline-block;
+  display: none;
   width: 115px;
 }
 

@@ -90,6 +90,14 @@ function googleMaps_shortcode($atts, $content = null) {
    return '<iframe width="'.esc_attr($width).'" height="'.esc_attr($height).'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'.esc_attr($src).'&amp;output=embed"></iframe>';
 }
 add_shortcode("googlemap", "googleMaps_shortcode");
+function storify_shortcode( $atts ){
+    extract( shortcode_atts( array(
+        'user' => 'berkmancenter',
+        'story' => 'oer-grantees-meeting-2012-opening-exercise-part-1'
+    ), $atts ));
+    return '<script src="http://storify.com/' . esc_attr($user) . '/' . esc_attr($story) . '.js"></script><noscript>[<a href="//storify.com/' . esc_attr($user) . '/' . esc_attr($story) .'" target="_blank">View the story on Storify</a>]</noscript>';
+}
+add_shortcode( 'storify', 'storify_shortcode' );
 
 define ('SLIDER_IMAGE_WIDTH', 940);
 define ('SLIDER_IMAGE_HEIGHT', 300);
