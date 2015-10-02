@@ -99,6 +99,14 @@ function storify_shortcode( $atts ){
 }
 add_shortcode( 'storify', 'storify_shortcode' );
 
+function dc_widgets_init() {
+  register_sidebar( array(
+    'name' => 'Header Widget Area',
+    'id' => 'sidebar-top-1',
+    'description' => 'Widgets in this area will be shown in the site header.',
+  ) );
+}
+
 define ('SLIDER_IMAGE_WIDTH', 940);
 define ('SLIDER_IMAGE_HEIGHT', 300);
 add_image_size('slider', SLIDER_IMAGE_WIDTH, SLIDER_IMAGE_HEIGHT);
@@ -108,5 +116,6 @@ wp_enqueue_script('dotdotdot', get_bloginfo('stylesheet_directory') . '/jquery.d
 wp_enqueue_script('flipclock', get_bloginfo('stylesheet_directory') . '/flipclock.min.js',array('jquery'));
 wp_enqueue_script('digitallyconnected', get_bloginfo('stylesheet_directory') . '/digitally_connected.js',array('filmroll', 'dotdotdot', 'flipclock'));
 add_action('init', 'add_custom_post_types');
+add_action( 'widgets_init', 'dc_widgets_init' );
 add_filter('widget_text', 'do_shortcode');
 ?>

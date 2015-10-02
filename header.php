@@ -60,16 +60,21 @@
 		<div id="masthead">
 			<div id="branding" role="banner">
         <div id="topbar">
-          <div id="logos">
-            COHOSTED BY: <a href="http://cyber.law.harvard.edu"><img src="<?php echo get_stylesheet_directory_uri(); ?>/berkman.png" alt="Berkman Center for Internet & Society" /></a>
-            <a href="http://www.unicef.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/unicef.png" alt="unicef" /></a>
-          </div>
           <div id="site-title">
             <span>
               <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/logo.png" alt="Digitally Connected" /></a>
             </span>
           </div>
+          <div id="logos">
+            COHOSTED BY: <a href="http://cyber.law.harvard.edu"><img src="<?php echo get_stylesheet_directory_uri(); ?>/berkman.png" alt="Berkman Center for Internet & Society" /></a>
+            <a href="http://www.unicef.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/unicef.png" alt="unicef" /></a>
+          </div>
           <div id="clock"></div>
+          <?php if (is_active_sidebar('sidebar-top-1')): ?>
+            <div id="header-sidebar">
+            <ul><?php dynamic_sidebar('sidebar-top-1'); ?></ul>
+            </div>
+          <?php endif; ?>
         </div>
 
       <?php echo film_roll(); ?>
