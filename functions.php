@@ -8,7 +8,8 @@ function film_roll() {
     'post_status' => 'publish',
     'meta_key' => 'featured',
     'orderby' => 'menu_order',
-    'order' => 'ASC'
+    'order' => 'ASC',
+    'posts_per_page' => -1
   );
 
   $my_query = new WP_Query($args);
@@ -16,10 +17,8 @@ function film_roll() {
   if ( $my_query->have_posts() ) { 
     while ( $my_query->have_posts() ) { 
       $my_query->the_post();
-      global $post;
-      //print_r($post);
-      if ( has_post_thumbnail( $post->ID ) &&
-        ( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'slider' ) )) {
+      if ( has_post_thumbnail( $my_query->post->ID ) &&
+        ( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $my_query->post->ID ), 'slider' ) )) {
           $html .= '<div><a href="' . get_permalink() . '" title="' . get_the_title() . '"><img src="'. $image[0] .'" width="'. $image[1] . '" height="'. $image[2] .'" /></a></div>';
         }
     }
